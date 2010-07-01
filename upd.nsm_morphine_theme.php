@@ -44,7 +44,7 @@ class Nsm_morphine_theme_upd
 		);
 		$this->EE->db->insert('modules', $data);
 
-		if($this->has_tabs)
+		if($this->has_tabs !== FALSE)
 			$this->EE->cp->add_layout_tabs($this->tabs, $data['module_name']);
 
 		return TRUE;
