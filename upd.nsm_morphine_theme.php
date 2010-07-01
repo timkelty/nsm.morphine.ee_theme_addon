@@ -44,7 +44,7 @@ class Nsm_morphine_theme_upd
 		);
 		$this->EE->db->insert('modules', $data);
 
-		if($this->has_tabs)
+		if(@$this->has_tabs)
 			$this->EE->cp->add_layout_tabs($this->tabs, $data['module_name']);
 
 		return TRUE;
@@ -89,7 +89,7 @@ class Nsm_morphine_theme_upd
 		$this->EE->db->where('class', $module_name . "_mcp");
 		$this->EE->db->delete('actions');
 
-		if($this->has_tabs)
+		if(@$this->has_tabs)
 			$this->EE->cp->delete_layout_tabs($this->tabs, $module_name);
 
 		return TRUE;
