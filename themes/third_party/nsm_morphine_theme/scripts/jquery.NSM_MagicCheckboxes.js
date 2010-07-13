@@ -7,7 +7,7 @@
 			var $self = $(this);
 			var dom = {
 					$container: $self,
-					$triggers: ($.isFunction(opts.triggerSelector)) ? opts.triggerSelector.call($self) : $(opts.triggerSelector, $self),
+					$triggers: ($.isFunction(opts.triggerSelector)) ? opts.triggerSelector.call($self) : $(opts.triggerSelector, $self)
 				};
 			dom.$triggers
 				.unbind(opts.event + ".NSM_MagicCheckboxes")
@@ -63,7 +63,7 @@
 		event: 'change',
 		triggerSelector: ':checkbox.NSM_MagicCheckboxesTrigger',
 		targetSelector: ':checkbox[name^=toggle]',
-		targetParentSelector: 'tr',
+		targetParentSelector: 'tr'
 	};
 
 })(jQuery);
