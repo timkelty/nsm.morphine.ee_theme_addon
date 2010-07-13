@@ -69,6 +69,12 @@
     border-top:1px solid #303f4a;
     text-shadow:0 -1px 0 rgba(0,0,0,1);
 }
+
+/*initial z-index for ie7*/
+#mainMenu li {
+  z-index: 1;
+}
+
 #navigationTabs {
 	margin-left:		20px;
 	margin-top:			0;
